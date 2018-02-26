@@ -5,7 +5,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
 /**
  *
  * @author 程序猿DD
@@ -15,8 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class HelloController {
-    @ResponseBody
     @RequestMapping("/hello")
+    @ResponseBody
     public String hello() {
         return "Hello World";
     }

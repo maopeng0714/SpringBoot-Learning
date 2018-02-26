@@ -15,6 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @version 1.0.0
  * @date 16/4/18 下午12:02.
  * @blog http://blog.didispace.com
+ * 启动Spring Boot程序，访问：http://localhost:8080/swagger-ui.html
  */
 @Configuration
 @EnableSwagger2

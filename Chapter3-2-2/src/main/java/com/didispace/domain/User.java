@@ -1,5 +1,6 @@
 package com.didispace.domain;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,9 +13,11 @@ import javax.persistence.Id;
  * @blog http://blog.didispace.com
  */
 @Entity
-public class User {
+public class User implements Serializable {
 
-    @Id
+    private static final long serialVersionUID = -3657114196390429429L;
+
+	@Id
     @GeneratedValue
     private Long id;
 
@@ -24,7 +27,10 @@ public class User {
     @Column(nullable = false)
     private Integer age;
 
-    public User(){}
+    protected User(){
+         // no-args constructor required by JPA spec
+        // this one is protected since it shouldn't be used directly
+    }
 
     public User(String name, Integer age) {
         this.name = name;
